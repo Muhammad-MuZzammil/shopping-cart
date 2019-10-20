@@ -1,0 +1,40 @@
+
+
+
+<header class="main-header">
+    <app-header></app-header>
+
+    <button id="side-menu-toggle">Menu</button>
+    <nav class="main-header__nav">
+      <ul class="main-header__item-list">
+        <li class="main-header__item">
+          <a
+            routerLinkActive="active"
+            >Products</a
+          >
+        </li>
+        <li class="main-header__item">
+          <a
+            routerLinkActive="active"
+            
+            >Cart</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="top-cart-wrapper" >
+      <span class="cart_img"><i class="fa fa-shopping-cart"></i></span>
+  
+      <div class="top-cart-contain">
+        <div class="block-cart">
+          <span class="top-cart-title"></span>
+          <span class="top-cart-count">
+            <span class="price"> </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+<footer></footer>

@@ -1,0 +1,50 @@
+<section class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-9 text-center">
+        <h4>Welcome to Online Shopping</h4>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+        <button class="btn btn-light" routerLink="/login" *ngIf="isAuth">
+          Login
+        </button>
+        <button class="btn btn-light" routerLink="/register" *ngIf="isAuth">
+          Register
+        </button>
+        <button *ngIf="!isAuth" class="btn btn-light" (click)="logout()">
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card text-center" *ngFor="let ElecItem of electronicItem" style="max-width: 202px;">
+          <!-- Heading -->
+
+          <!-- Image -->
+          <img src="{{ElecItem.productImage}}" alt="Photo of sunset" />
+
+          <!-- Text Content -->
+          <div class="card-body">
+            <p class="card-text">
+              <!-- The sun disappeared behind the horizon today. Experts claim it
+              could be gone for good! -->
+              {{ElecItem.description}}
+            </p>
+            <div class="card-body">
+              
+              <h6 class="card-subtitle text-muted">Price Rs. {{ElecItem.price}}</h6>
+            </div>
+            <a class="btn addToCart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
